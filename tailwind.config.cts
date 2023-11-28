@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-export const config = {
+const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -63,3 +63,5 @@ export const config = {
     plugins: [require("@tailwindcss/forms")],
   },
 };
+
+module.exports = config;
