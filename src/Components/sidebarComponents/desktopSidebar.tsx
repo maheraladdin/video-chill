@@ -33,7 +33,7 @@ export default function DesktopSidebar({closeSidebar, DesktopNavigation}: Deskto
     >
         {/*  Sidebar component FOR DESKTOP, swap this element with another sidebar if you like */}
 
-        <div className="flex grow flex-col gap-y-5 overflow-y-auto border border-gray-200 bg-white px-6 pb-4">
+        <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-6 pb-4">
             <nav className="flex flex-1 flex-col pt-8">
                 <ul role="list" className="flex flex-1 flex-col gap-y-7">
                     <li>
@@ -52,15 +52,15 @@ export default function DesktopSidebar({closeSidebar, DesktopNavigation}: Deskto
                                         }}
                                         className={classNames(
                                             item.current
-                                                ? " bg-gray-50 text-primary-600"
-                                                : " text-gray-700 hover:bg-gray-50 hover:text-primary-600",
+                                                ? " bg-gray-50 dark:bg-neutral-800 text-primary-600"
+                                                : " text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-neutral-800 hover:text-primary-600 hover:dark:text-primary-600",
                                             "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
                                         )}
                                     >
                                         {item.current
                                             ? item.icon("h-5 w-5 shrink-0 stroke-primary-600 ")
                                             : item.icon(
-                                                "h-5 w-5 shrink-0  stroke-gray-500  group-hover:stroke-primary-600"
+                                                "h-5 w-5 shrink-0  stroke-gray-500 dark:stroke-white group-hover:stroke-primary-600"
                                             )}
                                         <p className={classNames(closeSidebar ? "hidden" : "")}>
                                             {item.name}
@@ -78,15 +78,15 @@ export default function DesktopSidebar({closeSidebar, DesktopNavigation}: Deskto
                                 e.preventDefault();
                                 {
                                     sessionData
-                                        ? void router.push("/Settings")
+                                        ? router.push('/Settings')
                                         : void signIn();
                                 }
                             }}
-                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-neutral-800 hover:text-primary-600 dark:hover:text-primary-600"
                         >
                             <Settings
                                 className={
-                                    "h-5 w-5 shrink-0 stroke-gray-500 group-hover:stroke-primary-600"
+                                    "h-5 w-5 shrink-0 stroke-gray-500 dark:stroke-white group-hover:stroke-primary-600"
                                 }
                             />
                             <p className={classNames(closeSidebar ? "hidden" : "")}>
@@ -95,11 +95,11 @@ export default function DesktopSidebar({closeSidebar, DesktopNavigation}: Deskto
                         </Link>
                         <Link
                             href="/Blog/Help"
-                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-neutral-800 hover:text-primary-600 dark:hover:text-primary-600"
                         >
                             <HelpCircle
                                 className={
-                                    "h-5 w-5 shrink-0 stroke-gray-500 group-hover:stroke-primary-600"
+                                    "h-5 w-5 shrink-0 stroke-gray-500 dark:stroke-white group-hover:stroke-primary-600"
                                 }
                             />
                             <p className={classNames(closeSidebar ? "hidden" : "")}>

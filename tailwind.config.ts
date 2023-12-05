@@ -62,6 +62,7 @@ export const config = {
     },
     plugins: [require("@tailwindcss/forms")],
   },
+  darkMode: "class",
 };
 
 module.exports = config;

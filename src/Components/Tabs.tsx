@@ -45,15 +45,15 @@ export default function Tabs() {
     },
   ];
   return (
-    <div className="fixed bottom-0 z-50 w-full border border-gray-200 bg-white shadow-sm ">
+    <div className="fixed bottom-0 z-50 w-full border-t border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm ">
       <nav className="flex rounded-lg shadow" aria-label="Tabs">
         {tabs.map((tab) => (
           <Link
             key={tab.name}
             href="#"
             className={classNames(
-              tab.current ? " text-primary-600" : "text-gray-600",
-              "relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-xs font-medium  hover:bg-gray-50 z-10"
+              tab.current ? " text-primary-600" : "text-gray-600 dark:text-gray-400",
+              "relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-xs font-medium  hover:bg-gray-50 hover:dark:bg-neutral-800 z-10"
             )}
             onClick={(e) => {
               e.preventDefault();
@@ -67,7 +67,7 @@ export default function Tabs() {
             <div className="flex flex-col items-center ">
               {tab.current
                 ? tab.icon("h-4 w-4 shrink-0 stroke-primary-600 ")
-                : tab.icon("h-4 w-4 shrink-0  stroke-gray-600")}
+                : tab.icon("h-4 w-4 shrink-0  stroke-gray-600 dark:stroke-gray-400")}
               <span>{tab.name}</span>
             </div>
           </Link>

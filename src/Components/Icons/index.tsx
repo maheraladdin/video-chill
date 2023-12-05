@@ -17,7 +17,7 @@ export { default as VideoRecorder } from "./VideoRecorder";
 export { default as UserPlus } from "./UserPlus";
 export { default as FolderPlus } from "./FolderPlus";
 export { default as Plus } from "./Plus";
-export { Logo, LogoMini } from "./Logo";
+export { Logo } from "./Logo";
 export { default as Edit } from "./Edit";
 export { default as Upload } from "./Upload";
 export { default as Trash } from "./Trash";

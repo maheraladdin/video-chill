@@ -50,7 +50,7 @@ export function LoadingMessage() {
         height={250}
         width={200}
       />
-      <h1 className="text-2xl font-semibold text-gray-900">Loading</h1>
+      <h1 className="text-2xl font-semibold text-gray-900 dark:text-white/70">Loading</h1>
     </div>
   );
 }
