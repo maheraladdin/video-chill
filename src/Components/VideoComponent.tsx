@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Thumbnail } from "./index";
 import { useSession } from "next-auth/react";
 import { type FC } from "react";
-import videoId from "~/pages/video/[videoId]";
 
 interface VideoComponentProps {
   videos: {
@@ -34,7 +33,7 @@ export const MultiColumnVideo: FC<VideoComponentProps> = ({
       return (
         <Link
           href={`/video/${video.id}`}
-          className="flex flex-col items-start justify-between hover:bg-gray-100"
+          className="flex flex-col items-start justify-between hover:bg-gray-100 dark:hover:bg-neutral-900 rounded-2xl"
           key={video.id}
         >
           <div className="relative w-full">
@@ -68,7 +67,7 @@ export const SingleColumnVideo: FC<VideoComponentProps> = ({
       }
       return (
         <Link href={`/video/${video.id}`} key={video.id}>
-          <div className="my-5 flex flex-col gap-4 hover:bg-gray-100 lg:flex-row">
+          <div className="my-5 flex flex-col gap-4 hover:bg-gray-100 dark:hover:bg-neutral-900 lg:flex-row">
             <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:w-64 lg:shrink-0">
               <Thumbnail thumbnailUrl={video.thumbnailUrl} alt={`${video.title}'s thumbnail`} />
             </div>
@@ -103,7 +102,7 @@ export const SmallSingleColumnVideo: FC<VideoComponentProps> = ({
 
       return (
         <Link href={`/video/${video.id}`} key={video.id + index} onClick={refetch}>
-          <div className="overflow-hidden relative isolate my-4 flex flex-col gap-4 rounded-2xl border hover:bg-gray-100 lg:flex-row ">
+          <div className="overflow-hidden relative isolate my-4 flex flex-col gap-4 rounded-2xl border dark:border-neutral-700 hover:bg-gray-100 dark:hover:bg-neutral-900 lg:flex-row ">
             <div className=" aspect-[16/9] sm:aspect-[2/1] lg:w-52  lg:shrink-0">
               <Thumbnail notRounded={true} thumbnailUrl={video.thumbnailUrl} alt={`${video.title}'s thumbnail`} />
             </div>
@@ -134,7 +133,7 @@ export function VideoTitle({
 }) {
   return (
     <h1
-      className={`max-w-md font-semibold leading-6 text-gray-900 group-hover:text-gray-600 ${
+      className={`max-w-md font-semibold leading-6 text-gray-900 dark:text-white group-hover:text-gray-600 group-hover:dark:text-gray-50 ${
         limitSize ? "text-base" : "text-lg"
       } ${limitHeight ? "max-h-12 w-full overflow-hidden" : ""}`}
     >
@@ -159,12 +158,12 @@ export function VideoInfo({
 }) {
   return (
     <div className="mt-1 flex max-h-6 items-start overflow-hidden text-sm">
-      <p className=" text-gray-600">
+      <p className=" text-gray-600 dark:text-white">
         {views}
         <span> Views</span>
       </p>
-      <li className="pl-2 text-sm text-gray-500"></li>
-      <p className=" text-gray-600">{moment(createdAt).fromNow()}</p>
+      <li className="pl-2 text-sm text-gray-500 dark:text-gray-400"></li>
+      <p className=" text-gray-600 dark:text-white">{moment(createdAt).fromNow()}</p>
     </div>
   );
 }
@@ -192,7 +191,7 @@ export function UserImage({
 }
 export function UserName({ name }: { name: string }) {
   return (
-    <p className="max-h-6 overflow-hidden text-sm font-semibold leading-6 text-gray-900">
+    <p className="max-h-6 overflow-hidden text-sm font-semibold leading-6 text-gray-900 dark:text-white">
       {name}
     </p>
   );

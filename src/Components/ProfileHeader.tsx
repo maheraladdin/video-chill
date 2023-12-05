@@ -101,23 +101,23 @@ export default function ProfileHeader() {
             <div className="!-mt-6 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
               <div className="flex">
                 <UserImage
-                  className="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32"
+                  className="h-24 w-24 rounded-full ring-4 ring-white dark:ring-neutral-700 sm:h-32 sm:w-32"
                   image={channel.image || ""}
                   name={channel.name as string}
                 />
               </div>
               <div className="mt-6 sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:justify-end sm:space-x-6 sm:pb-1">
                 <div className="sm: mt-6 min-w-0 flex-1 md:block">
-                  <h1 className="truncate text-2xl font-bold text-gray-900">
+                  <h1 className="truncate text-2xl font-bold text-gray-900 dark:text-white">
                     {channel.name}
                   </h1>
-                  <p className="text-regular text-gray-600">{channel.handle}</p>
+                  <p className="text-regular text-gray-600 dark:text-white/70">{channel.handle}</p>
                   <div className="mt-1 flex items-start text-xs">
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600 dark:text-white/70">
                       {channel.followers} Followers
                     </p>
-                    <li className="pl-2 text-sm text-gray-500"></li>
-                    <p className="text-sm text-gray-600">
+                    <li className="pl-2 text-sm text-gray-500 dark:text-white/30"></li>
+                    <p className="text-sm text-gray-600 dark:text-white/70">
                       {channel.followings} Following
                     </p>
                   </div>

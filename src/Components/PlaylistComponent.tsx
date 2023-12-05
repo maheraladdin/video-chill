@@ -76,10 +76,10 @@ export const PlaylistPage: React.FC<PlaylistPageProps> = ({
               <div className="mt-4 flex gap-2">
                 <UserImage image={user.image || ""} name={user.name as string} />
                 <div className="flex flex-col ">
-                  <p className="w-max text-sm font-semibold leading-6 text-gray-900">
+                  <p className="w-max text-sm font-semibold leading-6 text-gray-900 dark:text-white">
                     {user.name || ""}
                   </p>
-                  <p className=" text-sm text-gray-600">
+                  <p className=" text-sm text-gray-600 dark:text-gray-400">
                     {user.followers}
                     <span> Followers</span>
                   </p>
@@ -185,7 +185,7 @@ export function SinglePlaylist({
         <div className="items-top relative mt-4 flex gap-x-4 ">
           <div className=" w-full ">
             <div className=" w-100 flex ">
-              <h3 className="h-auto w-full text-2xl font-medium text-gray-900 group-hover:text-gray-600">
+              <h3 className="h-auto w-full text-2xl font-medium text-gray-900 dark:text-white group-hover:text-gray-600 dark:text-gray-400">
                 {playlist.title}
               </h3>
             </div>
