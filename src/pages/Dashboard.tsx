@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import {
-  ErrorMessage,
+  PageErrorMessage,
   Layout,
   LoadingMessage,
   Thumbnail,
@@ -35,7 +35,7 @@ const Dashboard: NextPage = () => {
       return <LoadingMessage />;
     } else if (error || !data) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenPeople"
           message="Error loading channel"
           description="Sorry there is at this time."
@@ -108,7 +108,7 @@ const Dashboard: NextPage = () => {
               </div>
 
               {data?.videos.length === 0 ? (
-                  <ErrorMessage
+                  <PageErrorMessage
                       icon="GreenPlay"
                       message="No videos uploaded"
                       description="Upload a video to get started."

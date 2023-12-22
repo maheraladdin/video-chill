@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import { api } from "~/utils/api";
 import { useRouter } from "next/router";
 import {
-  ErrorMessage,
+  PageErrorMessage,
   Layout,
   LoadingMessage,
   ProfileHeader,
@@ -33,7 +33,7 @@ const ProfileFollowigs: NextPage = () => {
       return <LoadingMessage />;
     } else if (userId == sessionData?.user.id && errorTypes) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenHorn"
           message="No people followed"
           description="You have yet to follow anyone else. Follow someone now!"
@@ -41,7 +41,7 @@ const ProfileFollowigs: NextPage = () => {
       );
     } else if (errorTypes) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenPeople"
           message="No people followed"
           description="This page has yet to follow a new person. "

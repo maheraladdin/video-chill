@@ -17,6 +17,6 @@ export {
   UserName,
 } from "./VideoComponent";
 export { Thumbnail } from "./Thumbnail";
-export { ErrorMessage } from "./ErrorMessage";
-export { LoadingMessage } from "./ErrorMessage";
+export { PageErrorMessage } from "./PageErrorMessage";
+export { LoadingMessage } from "./PageErrorMessage";
 export { Content } from "./Content";

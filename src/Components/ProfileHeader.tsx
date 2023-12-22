@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { Button, FollowButton } from "./Buttons";
 import { useSession } from "next-auth/react";
 import { Edit } from "./Icons";
-import { ErrorMessage, LoadingMessage, UserImage } from "./index";
+import { PageErrorMessage, LoadingMessage, UserImage } from "./index";
 import Head from "next/head";
 
 
@@ -65,7 +65,7 @@ export default function ProfileHeader() {
       return <LoadingMessage />;
     } else if (errorTypes) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenPeople"
           message="Error loading Channel"
           description="Sorry there is a error loading channel at this time."

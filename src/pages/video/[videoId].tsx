@@ -15,7 +15,7 @@ import {
   SmallSingleColumnVideo,
   CommentSection,
   Layout,
-  ErrorMessage,
+  PageErrorMessage,
   LoadingMessage,
   VideoTitle,
   VideoInfo,
@@ -80,7 +80,7 @@ const VideoPage: NextPage = () => {
       return <LoadingMessage />;
     } else if (errorTypes) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenPlay"
           message="No Video"
           description="Sorry there is an error with video ."

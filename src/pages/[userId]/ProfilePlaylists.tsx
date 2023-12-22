@@ -1,12 +1,11 @@
 import { type NextPage } from "next";
-import Head from "next/head";
 import { api } from "~/utils/api";
 import { useRouter } from "next/router";
 import {
   MultiColumnPlaylist,
   ProfileHeader,
   Layout,
-  ErrorMessage,
+  PageErrorMessage,
   LoadingMessage,
 } from "~/Components";
 import { useSession } from "next-auth/react";
@@ -29,7 +28,7 @@ const ProfilePlaylists: NextPage = () => {
     } else if (userId == sessionData?.user.id && errorTypes) {
       // if user is on their own profile and has no playlists
       return (
-        <ErrorMessage
+        <PageErrorMessage
           message="No Playlists Created"
           description="You have not yet created a playlist inside your library."
         />
@@ -37,7 +36,7 @@ const ProfilePlaylists: NextPage = () => {
     } else if (errorTypes) {
       // if user is on another user's profile and they have no playlists
       return (
-        <ErrorMessage
+        <PageErrorMessage
           message="No Playlists created"
           description="Profile has not yet created a playlist."
         />

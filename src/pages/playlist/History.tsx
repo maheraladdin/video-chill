@@ -1,6 +1,6 @@
 import React from "react";
 import { api } from "~/utils/api";
-import { ErrorMessage, Layout, LoadingMessage } from "~/Components";
+import { PageErrorMessage, Layout, LoadingMessage } from "~/Components";
 import { type NextPage } from "next/types";
 import { useSession } from "next-auth/react";
 import { PlaylistPage } from "~/Components/PlaylistComponent";
@@ -20,7 +20,7 @@ const History: NextPage = () => {
       return <LoadingMessage />;
     } else if (error || !data) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenPlay"
           message="No Current History"
           description="Watching some videos inorder to add to history."

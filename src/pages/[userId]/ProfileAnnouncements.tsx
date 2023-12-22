@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import { api } from "~/utils/api";
 import { useRouter } from "next/router";
 import {
-  ErrorMessage,
+  PageErrorMessage,
   Layout,
   LoadingMessage,
   ProfileHeader,
@@ -65,7 +65,7 @@ const ProfileAnnouncements: NextPage = () => {
       return <LoadingMessage />;
     } else if (userId == sessionData?.user.id && errorTypes) {
       return (
-          <ErrorMessage
+          <PageErrorMessage
               icon="GreenHorn"
               message="No Announcements"
               description="You have yet to make an announcement. Post one now!"
@@ -73,7 +73,7 @@ const ProfileAnnouncements: NextPage = () => {
       );
     } else if (errorTypes) {
       return (
-          <ErrorMessage
+          <PageErrorMessage
               icon="GreenHorn"
               message="No Announcements"
               description="This page has yet to make an announcement."

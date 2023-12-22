@@ -5,7 +5,7 @@ import {
   MultiColumnVideo,
   Layout,
   ProfileHeader,
-  ErrorMessage,
+  PageErrorMessage,
   LoadingMessage,
 } from "~/Components";
 import { useSession } from "next-auth/react";
@@ -32,7 +32,7 @@ const ProfileVideos: NextPage = () => {
       // if user is on their own profile and has no videos
       return (
         <>
-          <ErrorMessage
+          <PageErrorMessage
             message="No Videos Uploaded"
             description="Click to upload new video. You have yet to upload a video."
           >
@@ -45,13 +45,13 @@ const ProfileVideos: NextPage = () => {
               <Plus className="mr-2 h-5 w-5 shrink-0 stroke-white" />
               New Video
             </Button>
-          </ErrorMessage>
+          </PageErrorMessage>
         </>
       );
     } else if (errorTypes) {
       // if user is on another user's profile and they have no videos
       return (
-        <ErrorMessage
+        <PageErrorMessage
           message="No videos avaliable"
           description="Profile has no videos uploaded."
         />

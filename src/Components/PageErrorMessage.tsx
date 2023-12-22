@@ -2,7 +2,7 @@ import { GreenHorn, GreenPeople, GreenPlay } from "./Icons";
 import ReactLoading from "react-loading";
 import {type ReactNode} from "react";
 
-export function ErrorMessage({
+export function PageErrorMessage({
   children,
   message,
   description,

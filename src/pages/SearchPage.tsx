@@ -6,7 +6,7 @@ import {
   SingleColumnVideo,
   Layout,
   LoadingMessage,
-  ErrorMessage,
+  PageErrorMessage,
 } from "../Components";
 
 const SearchPage: NextPage = () => {
@@ -23,7 +23,7 @@ const SearchPage: NextPage = () => {
       return <LoadingMessage />;
     } else if (error || !data) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenPlay"
           message="No Videos"
           description="Sorry try another search result ."

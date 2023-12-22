@@ -5,7 +5,7 @@ import {
   MultiColumnVideo,
   Layout,
   LoadingMessage,
-  ErrorMessage,
+  PageErrorMessage,
 } from "../Components";
 
 const Home: NextPage = () => {
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       return <LoadingMessage />;
     } else if (error || !data) {
       return (
-        <ErrorMessage
+        <PageErrorMessage
           icon="GreenPlay"
           message="No Videos"
           description="Sorry there is no videos at this time."
