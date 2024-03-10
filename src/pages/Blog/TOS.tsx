@@ -94,10 +94,10 @@ const TOS: NextPage = () => {
                 year: "numeric",
               })}
             </p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
               Terms and conditions{" "}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
               By accessing our website, you are agreeing to be bound by these
               terms of service, and agree that you are responsible for
               compliance with any applicable local laws.

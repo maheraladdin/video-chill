@@ -51,7 +51,6 @@ export const authOptions: NextAuthOptions = {
         host: env.EMAIL_SERVER_HOST,
         port: env.EMAIL_SERVER_PORT,
         auth: {
-          user: env.EMAIL_SERVER_USER,
           pass: env.EMAIL_SERVER_PASSWORD,
         },
       },
@@ -70,7 +69,7 @@ export const authOptions: NextAuthOptions = {
   ],
 
   theme: {
-    colorScheme: "light", // "auto" | "dark" | "light"
+    colorScheme: "auto", // "auto" | "dark" | "light"
     brandColor: "#11999E", // Hex color code
     logo: "/logo.svg", // Absolute URL to image
     buttonText: "#FFFFFF", // Hex color code

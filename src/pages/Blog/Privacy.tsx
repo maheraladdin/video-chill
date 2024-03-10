@@ -68,10 +68,10 @@ const Privacy: NextPage = () => {
             <p className="text-base font-semibold leading-7 text-primary-600">
               Privacy Policy
             </p>
-            <h1 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
               We care about your privacy{" "}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
               Your privacy is important to us at Vidchill . We respect your
               privacy regarding any information we may collect from you across
               our website.

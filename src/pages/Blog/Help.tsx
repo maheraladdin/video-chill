@@ -77,7 +77,7 @@ const Help: NextPage = () => {
             <h1 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
               We’re here to help{" "}
             </h1>
-            <p className="mb-4 mt-6  text-lg leading-8 text-gray-600">
+            <p className="mb-4 mt-6  text-lg leading-8 text-gray-600 dark:text-gray-400">
               Have questions? We’re here to help.
             </p>
             <Button
@@ -95,7 +95,7 @@ const Help: NextPage = () => {
                 {({ open }) => (
                   <>
                     <dt>
-                      <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-900">
+                      <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-900 dark:text-white">
                         <span className="text-base font-semibold leading-7">
                           {faq.question}
                         </span>
@@ -115,7 +115,7 @@ const Help: NextPage = () => {
                       </Disclosure.Button>
                     </dt>
                     <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <p className="text-base leading-7 text-gray-600">
+                      <p className="text-base leading-7 text-gray-600 dark:text-gray-400">
                         {faq.answer}
                       </p>
                     </Disclosure.Panel>
