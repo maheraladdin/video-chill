@@ -47,7 +47,14 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     EmailProvider({
-      server: env.EMAIL_SERVER,
+      server: {
+        host: env.EMAIL_SERVER_HOST,
+        port: 465,
+        auth: {
+          user: env.EMAIL_SERVER_USER,
+          pass: env.EMAIL_SERVER_PASSWORD,
+        },
+      },
       from: env.EMAIL_FROM,
       maxAge: 10 * 60,
     }),
