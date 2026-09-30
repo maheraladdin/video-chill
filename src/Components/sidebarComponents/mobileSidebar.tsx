@@ -157,9 +157,7 @@ export default function MobileSidebar({isOpen, setSidebarOpen, mobileNavigation}
                                                     className="w-full"
                                                     onClick={(e) => {
                                                         e.preventDefault();
-                                                        {
-                                                            void signIn();
-                                                        }
+                                                        void router.push("/auth/signup");
                                                     }}
                                                 >
                                                     {" "}

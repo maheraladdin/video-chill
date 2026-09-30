@@ -265,7 +265,7 @@ export default function Navbar({ children }: NavbarProps) {
                 <Button
                   variant="primary"
                   size="md"
-                  onClick={!sessionData ? () => void signIn() : () => ""}
+                  onClick={() => void router.push("/auth/signup")}
                 >
                   Sign up
                 </Button>

@@ -155,7 +155,9 @@ async function main() {
   );
 
   await processInChunks(videoEngagements, 1, (videoEngagement) =>
-    prisma.videoEngagement.create({ data: videoEngagement })
+    prisma.videoEngagement.create({
+      data: { ...videoEngagement, userId: getNextUserId() },
+    })
   );
 
   await processInChunks(followEngagements, 1, async (followEngagement) => {
