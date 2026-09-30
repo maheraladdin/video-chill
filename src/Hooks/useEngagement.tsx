@@ -25,7 +25,7 @@ export function useEngagementButton({
                                       viewer,
                                       addLikeMutation,
                                       addDislikeMutation,
-                                      refetch = () => {},
+                                      refetch = () => undefined,
                                     }: useEngagementButtonProps) {
   const [likeCount, setLikeCount] = useState(EngagementData.likes);
   const [dislikeCount, setDislikeCount] = useState(EngagementData.dislikes);

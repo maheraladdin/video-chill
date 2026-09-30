@@ -13,14 +13,10 @@ const getVideosBySearch = publicProcedure
         const videosWithUser = await ctx.prisma.video.findMany({
             where: {
                 publish: true,
-                OR: {
-                    description: {
-                        contains: title,
-                    },
-                    title: {
-                        contains: title,
-                    }
-                }
+                OR: [
+                    { description: { contains: title } },
+                    { title: { contains: title } },
+                ],
             },
             take,
             include: {

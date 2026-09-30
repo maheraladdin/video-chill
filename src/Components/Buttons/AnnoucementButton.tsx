@@ -20,7 +20,7 @@ interface AnnouncementButtonProps {
 export default function AnnouncementButton({
                                                EngagementData,
                                                viewer,
-                                               refetch = () => {},
+                                               refetch = () => undefined,
                                            }: AnnouncementButtonProps) {
     const { likeCount, dislikeCount, userChoice, handleLike, handleDislike } =
         useEngagementButton({

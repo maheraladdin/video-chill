@@ -21,7 +21,7 @@ interface LikeDislikeButtonProps {
 export default function LikeDislikeButton({
                                               EngagementData,
                                               viewer,
-                                              refetch = () => {},
+                                              refetch = () => undefined,
                                           }: LikeDislikeButtonProps) {
     const { likeCount, dislikeCount, userChoice, handleLike, handleDislike } =
         useEngagementButton({

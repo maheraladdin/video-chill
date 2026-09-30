@@ -20,7 +20,7 @@ export default function FollowButton({
   followingId,
   hideIcon,
   viewer,
-  refetch = () => {},
+  refetch = () => undefined,
 }: FollowButton) {
   const { data: sessionData } = useSession();
   const [isFollowing, setIsFollowing] = useState(viewer.hasFollowed);
